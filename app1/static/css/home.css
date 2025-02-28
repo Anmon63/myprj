@@ -1,0 +1,9 @@
+
+body{
+    background-color: blue;
+    background-size: cover;
+}
+img{
+    width: 300px;
+    height: 10px;
+}

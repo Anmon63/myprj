@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    </head>
+    <body>
+        <img src="{% static 'images/home.png' %}">
+        <div classname="ho">
+        <a href="{% url 'admdet' %}">View Student Details</a>
+        <h1>Student Registration Form</h1>
+        <h2>Enter your details:</h2>
+        <form action="{% url 'addadm' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type=text placeholder="Enter your first name:" name="fname">
+            <input type=text placeholder="Enter your last name:" name='lname'>
+            <input type=email placeholder="Enter your email:" name='email'>
+            <input type=text placeholder="Enter your standard:" name='standard'>
+            <input type=text placeholder="Enter your address:" name='address'>
+            <input type=number placeholder="Enter your phone number:" name='phone'>
+            <input type=submit value="Submit">
+        </form>
+    </div>
+        <script src="" async defer></script>
+    </body>
+</html>
